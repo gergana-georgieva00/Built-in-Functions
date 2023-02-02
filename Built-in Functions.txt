@@ -4813,3 +4813,8 @@ select FirstName, LastName
 from Employees
 where JobTitle not like('%engineer%')
 
+select [Name]
+from Towns
+where len([Name]) in (5, 6)
+order by [Name]
+
