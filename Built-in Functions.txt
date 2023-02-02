@@ -4796,3 +4796,7 @@ REFERENCES Towns(TownID)
 GO
 
 
+select FirstName, LastName
+from Employees
+where FirstName like 'Sa%'
+
