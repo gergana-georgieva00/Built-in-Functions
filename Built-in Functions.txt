@@ -4818,3 +4818,8 @@ from Towns
 where len([Name]) in (5, 6)
 order by [Name]
 
+select TownId, [Name]
+from Towns
+where [Name] like '[M, K, B, E]%'
+order by [Name]
+
