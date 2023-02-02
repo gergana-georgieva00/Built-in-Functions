@@ -4834,3 +4834,7 @@ select FirstName, LastName
 from Employees
 where year(HireDate) > 2000
 
+select FirstName, LastName
+from Employees
+where len(LastName) = 5
+
