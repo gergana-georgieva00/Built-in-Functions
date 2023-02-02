@@ -4845,3 +4845,15 @@ from Employees
 where Salary between 10000 and 50000 
 order by Salary desc
 
+select * from
+	(
+	select EmployeeID, FirstName, LastName, Salary,
+	dense_rank() over (partition by Salary order by EmployeeID)
+	as SalaryDenseRank
+	from Employees
+	where Salary between 10000 and 50000
+	)
+as [SalarySubquery]
+where [SalaryDenseRank] = 2
+order by Salary desc
+
