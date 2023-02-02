@@ -4823,3 +4823,8 @@ from Towns
 where [Name] like '[M, K, B, E]%'
 order by [Name]
 
+select TownId, [Name]
+from Towns
+where [Name] not like '[R, B, D]%'
+order by [Name]
+
