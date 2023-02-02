@@ -4809,3 +4809,7 @@ from Employees
 where DepartmentID in (3, 10)
 and year(HireDate) between 1995 and 2005
 
+select FirstName, LastName
+from Employees
+where JobTitle not like('%engineer%')
+
