@@ -4828,3 +4828,9 @@ from Towns
 where [Name] not like '[R, B, D]%'
 order by [Name]
 
+create view [V_EmployeesHiredAfter2000]
+as
+select FirstName, LastName
+from Employees
+where year(HireDate) > 2000
+
