@@ -4804,3 +4804,8 @@ select FirstName, LastName
 from Employees
 where LastName like '%ei%'
 
+select FirstName 
+from Employees
+where DepartmentID in (3, 10)
+and year(HireDate) between 1995 and 2005
+
