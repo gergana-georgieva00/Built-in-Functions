@@ -4857,3 +4857,6 @@ as [SalarySubquery]
 where [SalaryDenseRank] = 2
 order by Salary desc
 
+
+
+Part II – Queries for Geography Database
