@@ -4874,3 +4874,9 @@ from Peaks as p,
 where right(lower(p.PeakName), 1) = left(lower(r.RiverName), 1)
 order by Mix
 
+select top 50 [Name], format ([Start], 'yyyy-MM-dd') as [Start]
+from Games
+where year([Start]) in (2011, 2012)
+order by [Start],
+		 [Name]
+		 
