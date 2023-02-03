@@ -4866,3 +4866,11 @@ from Countries
 where CountryName like '%a%a%a%'
 order by IsoCode
 
+select p.PeakName, r.RiverName,
+lower(concat(substring(p.PeakName, 1, len(p.PeakName) - 1), r.RiverName))
+as Mix
+from Peaks as p, 
+	 Rivers as r
+where right(lower(p.PeakName), 1) = left(lower(r.RiverName), 1)
+order by Mix
+
