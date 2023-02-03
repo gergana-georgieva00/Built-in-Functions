@@ -4891,3 +4891,20 @@ from Users
 where [IpAddress] like '___.1%.%.___'
 order by [Username]
 
+select [Name] as [Game],
+case 
+	 when datepart(hour, [Start]) >= 0 and datepart(hour, [Start]) < 12 then 'Morning'
+	 when datepart(hour, [Start]) >= 12 and datepart(hour, [Start]) < 18 then 'Afternoon'
+	 when datepart(hour, [Start]) >= 18 and datepart(hour, [Start]) < 24 then 'Evening'
+end as [Part of the Day]
+, 
+case 
+	 when [Duration] <= 3 then 'Extra Short'
+	 when [Duration] >= 4 and [Duration] <= 6 then 'Short'
+	 when [Duration] > 6 then 'Long'
+	 when [Duration] is null then 'Extra Long'
+end as [Duration]
+from Games
+order by [Game],
+		 [Duration]
+		 
