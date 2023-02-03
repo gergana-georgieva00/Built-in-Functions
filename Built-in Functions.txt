@@ -4908,3 +4908,7 @@ from Games
 order by [Game],
 		 [Duration]
 		 
+select [ProductName], [OrderDate], 
+DATEADD(day, 3, [OrderDate]) as [Pay Due],
+DATEADD(month, 1, [OrderDate]) as [Deliver Due]
+from Orders
