@@ -4860,3 +4860,9 @@ order by Salary desc
 
 
 Part II – Queries for Geography Database
+
+select CountryName, IsoCode
+from Countries
+where CountryName like '%a%a%a%'
+order by IsoCode
+
